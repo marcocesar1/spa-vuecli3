@@ -12,6 +12,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },{
+      path: '/user/:userId',
+      name: 'user',
+      props: true,
+      component: () => import('./views/User.vue')
     },
     {
       path: '/about',

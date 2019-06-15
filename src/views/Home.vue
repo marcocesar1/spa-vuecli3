@@ -27,7 +27,9 @@
           <tbody>
             <tr v-for="(persona, index) in searchPersona" :key="index">
               <th scope="row" v-text="persona.id"></th>
-              <td v-text="persona.name"></td>
+              <td>
+                <router-link :to="{ name: 'user', params: { userId: persona.id } }">{{persona.name}}</router-link>
+              </td>
               <td v-text="persona.username"></td>
               <td v-text="persona.email"></td>
             </tr>
