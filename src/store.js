@@ -6,17 +6,22 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    persona: []
+    personas: []
+  },
+  getters: {
+    searchPersona: (state) => (busqueda) => {
+      return state.personas.filter( persona => persona.name.toLowerCase().includes(busqueda) )
+    }
   },
   mutations: {
-    setPersona(state, persona){
-      state.persona = persona;
+    setPersonas(state, personas){
+      state.personas = personas;
     }
   },
   actions: {
     getPersona(context){
-      Axios.get('http://jsonplaceholder.typicode.com/todos/1').then( response => {        
-        context.commit('setPersona', response.data)
+      Axios.get('http://jsonplaceholder.typicode.com/users').then( response => {        
+        context.commit('setPersonas', response.data)
       })
     }
   }
