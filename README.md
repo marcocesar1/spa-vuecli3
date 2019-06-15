@@ -1,5 +1,7 @@
 # vue-ie-completo
 
+##spa - vuecli3 - vuex - router
+
 ## Project setup
 ```
 npm install
