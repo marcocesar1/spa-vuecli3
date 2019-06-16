@@ -1,10 +1,5 @@
 <template>
-  <div class="home">
-    <div class="row">
-      <div class="col-md-12 center">
-        <img alt="Vue logo" src="../assets/logo.png">
-      </div>
-    </div>
+  <div class="home">    
     <div class="row">
       <div class="col-md-6">
         <input v-model="busqueda" class="form-control" type="text" placeholder="Name">
@@ -37,7 +32,11 @@
         </table>        
       </div>
     </div>
-    <!--<p><strong>{{personas}}</strong></p>-->
+    <div class="row">
+      <div class="col-md-12 center">
+        <img alt="Vue logo" src="../assets/logo.png">
+      </div>
+    </div>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
